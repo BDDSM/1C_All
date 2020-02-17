@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="НомерВетки" id="67">
+			<DataPath>НомерВетки</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="НомерВеткиКонтекстноеМеню" id="68"/>
+			<ExtendedTooltip name="НомерВеткиРасширеннаяПодсказка" id="69"/>
+		</InputField>
+		<CheckBoxField name="принутдительноForce" id="21">
+			<DataPath>ПринудительноForce</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="принутдительноForceКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="принутдительноForceРасширеннаяПодсказка" id="23"/>
+		</CheckBoxField>
+		<UsualGroup name="Группа1" id="24">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="26">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<UsualGroup name="Группа8" id="60">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Checkout
+(Переключить на)</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<Button name="ПереключениеНаЗадачу" id="9">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПереключениеНаЗадачу</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Feature (Задачу)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПереключениеНаЗадачуРасширеннаяПодсказка" id="10"/>
+								</Button>
+								<Button name="ПереключениеНаОшибку" id="7">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПереключениеНаОшибку</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Bugfix (Ошибку)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПереключениеНаОшибкуРасширеннаяПодсказка" id="8"/>
+								</Button>
+								<Button name="ПереключениеНаВеткуmaster" id="11">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПереключениеНаВеткуmaster</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Master (Мастер)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПереключениеНаВеткуmasterРасширеннаяПодсказка" id="12"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа7" id="52">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметр</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<RadioButtonField name="ПризнакПараметра" id="70">
+									<DataPath>ПризнакПараметра</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Задача</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">feature</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Ошибка</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">bugfix</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПризнакПараметраКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ПризнакПараметраРасширеннаяПодсказка" id="72"/>
+									<Events>
+										<Event name="OnChange">ПризнакПараметраПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="28">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<UsualGroup name="Группа5" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GIT Command</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="37"/>
+							<ChildItems>
+								<Button name="GitADD" id="17">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.GITAdd</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Add (Добавить)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="GitADDРасширеннаяПодсказка" id="18"/>
+								</Button>
+								<Button name="GITPull" id="13">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.GITPull</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Pull (Извлечь)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="GITPullРасширеннаяПодсказка" id="14"/>
+								</Button>
+								<Button name="GITStash" id="65">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.GITStash</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Stash (Спрятать)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="GITStashРасширеннаяПодсказка" id="66"/>
+								</Button>
+								<Button name="GITStatus" id="46">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.GITStatus</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Status (Статус)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="GITStatusРасширеннаяПодсказка" id="47"/>
+								</Button>
+								<Button name="GITbranch" id="48">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.GITbranch</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Branch (Создать)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="GITbranchРасширеннаяПодсказка" id="49"/>
+								</Button>
+								<Button name="GITRebase" id="30">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.GITRebase</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Rebase (Обновить)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="GITRebaseРасширеннаяПодсказка" id="31"/>
+								</Button>
+								<Button name="GITCheckout" id="50">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.GITCheckout</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Checkout (Переключиться)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="GITCheckoutРасширеннаяПодсказка" id="51"/>
+								</Button>
+								<Button name="GITFetch" id="15">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.GITFetch</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Fetch (Извлечь)</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="GITFetchРасширеннаяПодсказка" id="16"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа4" id="34">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Commit</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" height="14" kind="StyleItem"/>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<Button name="GITCommit" id="19">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.GITCommit</CommandName>
+									<ExtendedTooltip name="GITCommitРасширеннаяПодсказка" id="20"/>
+								</Button>
+								<Button name="ОтменитьПоследнийКомит" id="32">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОтменитьПоследнийКомит</CommandName>
+									<ExtendedTooltip name="ОтменитьПоследнийКомитРасширеннаяПодсказка" id="33"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="КомментарийККомиту" id="38">
+			<DataPath>КомментарийККомиту</DataPath>
+			<ContextMenu name="КомментарийККомитуКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="КомментарийККомитуРасширеннаяПодсказка" id="40"/>
+		</InputField>
+		<UsualGroup name="Группа6" id="41">
+			<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<TextDocumentField name="ТекущийСтатус" id="43">
+					<DataPath>ТекущийСтатус</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ТекущийСтатусКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ТекущийСтатусРасширеннаяПодсказка" id="45"/>
+				</TextDocumentField>
+			</ChildItems>
+		</UsualGroup>
+		<PictureField name="PictureGIT" id="62">
+			<DataPath>PictureGIT</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="PictureGITКонтекстноеМеню" id="63"/>
+			<ExtendedTooltip name="PictureGITРасширеннаяПодсказка" id="64"/>
+		</PictureField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.GITИпонаМедь</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НомерВетки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ветки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПринудительноForce" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принудительно (force)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КомментарийККомиту" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий к комиту</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийСтатус" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="PictureGIT" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Picture GIT</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПризнакПараметра" id="3">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПереключениеНаВеткуmaster" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключение на master</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключение на веткуmaster</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереключениеНаВеткуmaster</Action>
+		</Command>
+		<Command name="ПереключениеНаЗадачу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключение на задачу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключение на задачу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереключениеНаЗадачу</Action>
+		</Command>
+		<Command name="ПереключениеНаОшибку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключение на ошибку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключение на ошибку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереключениеНаОшибку</Action>
+		</Command>
+		<Command name="GITFetch" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GITFetch</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данная команда связывается с указанным удалённым проектом и забирает все те данные проекта, которых у вас ещё нет. После того как вы выполнили команду, у вас должны появиться ссылки на все ветки из удалённого проекта.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>GITFetch</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="GITPull" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GITPull</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда git pull работает как комбинация команд git fetch и git merge, т.е. Git вначале забирает изменения из указанного удалённого репозитория, а затем пытается слить их с текущей веткой. (Перенесение файлов из основного хранилища репозитория в локальное хранилище)
+</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateInitialImage</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>GITPull</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="GITAdd" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GITAdd</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавление файлов перед коммитом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>GITAdd</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="GITCommit" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GITCommit</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зафиксировать текущие изменения с прикрепленным комментарием</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.QueryWizardShowChangesTables</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>GITCommit</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="GITRebase" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Rebase</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить текущий локальный репозиторий (список файлов на локальном хранилище)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>GITRebase</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОтменитьПоследнийКомит" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить последний комит</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить последний комит</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SpreadsheetDeletePageBreak</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтменитьПоследнийКомит</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="GITStatus" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Status</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GITStatus</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>GITStatus</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="GITbranch" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GITbranch</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда git branch — это "менеджер веток".
+ Команда умеет перечислять ветки, создавать новые, удалять и переименовывать их.
+   В данном контексте только создает.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>GITbranch</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="GITCheckout" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GITCheckout</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GITCheckout</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>GITCheckout</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="GITStash" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GITStash</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GITStash</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GrayedAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>GITStash</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

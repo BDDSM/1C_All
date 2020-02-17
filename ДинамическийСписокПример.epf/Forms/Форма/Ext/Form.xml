@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Реквизит1" id="1">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Реквизит1</DataPath>
+			<RowPictureDataPath>Реквизит1.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="Реквизит1КонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="Реквизит1КоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="Реквизит1РасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="Реквизит1СтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Реквизит1</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="Реквизит1СтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="Реквизит1СтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="Реквизит1СостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Реквизит1</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="Реквизит1СостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="Реквизит1СостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="Реквизит1УправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Реквизит1</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="Реквизит1УправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="Реквизит1УправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Реквизит1АгентВылета" id="14">
+					<DataPath>~Реквизит1.АгентВылета</DataPath>
+					<ContextMenu name="Реквизит1АгентВылетаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="Реквизит1АгентВылетаРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<LabelField name="Реквизит1АгентПрилета" id="17">
+					<DataPath>~Реквизит1.АгентПрилета</DataPath>
+					<ContextMenu name="Реквизит1АгентПрилетаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="Реквизит1АгентПрилетаРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<LabelField name="Реквизит1АэропортВылета" id="20">
+					<DataPath>~Реквизит1.АэропортВылета</DataPath>
+					<ContextMenu name="Реквизит1АэропортВылетаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="Реквизит1АэропортВылетаРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<LabelField name="Реквизит1АэропортВылетаСмещениеUTC" id="23">
+					<DataPath>~Реквизит1.АэропортВылетаСмещениеUTC</DataPath>
+					<ContextMenu name="Реквизит1АэропортВылетаСмещениеUTCКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="Реквизит1АэропортВылетаСмещениеUTCРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<LabelField name="Реквизит1АэропортПрилета" id="26">
+					<DataPath>~Реквизит1.АэропортПрилета</DataPath>
+					<ContextMenu name="Реквизит1АэропортПрилетаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="Реквизит1АэропортПрилетаРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="Реквизит1АэропортПрилетаСмещениеUTC" id="29">
+					<DataPath>~Реквизит1.АэропортПрилетаСмещениеUTC</DataPath>
+					<ContextMenu name="Реквизит1АэропортПрилетаСмещениеUTCКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="Реквизит1АэропортПрилетаСмещениеUTCРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<LabelField name="Реквизит1ВерсияДанных" id="32">
+					<DataPath>~Реквизит1.ВерсияДанных</DataPath>
+					<ContextMenu name="Реквизит1ВерсияДанныхКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="Реквизит1ВерсияДанныхРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<LabelField name="Реквизит1ВремяВПолете" id="35">
+					<DataPath>~Реквизит1.ВремяВПолете</DataPath>
+					<ContextMenu name="Реквизит1ВремяВПолетеКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="Реквизит1ВремяВПолетеРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="Реквизит1ВремяВПолетеСтрока" id="38">
+					<DataPath>~Реквизит1.ВремяВПолетеСтрока</DataPath>
+					<ContextMenu name="Реквизит1ВремяВПолетеСтрокаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="Реквизит1ВремяВПолетеСтрокаРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="Реквизит1ВС" id="41">
+					<DataPath>~Реквизит1.ВС</DataPath>
+					<ContextMenu name="Реквизит1ВСКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="Реквизит1ВСРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="Реквизит1Дата" id="44">
+					<DataPath>~Реквизит1.Дата</DataPath>
+					<ContextMenu name="Реквизит1ДатаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="Реквизит1ДатаРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<LabelField name="Реквизит1ДатаВылета" id="47">
+					<DataPath>~Реквизит1.ДатаВылета</DataPath>
+					<ContextMenu name="Реквизит1ДатаВылетаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="Реквизит1ДатаВылетаРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="Реквизит1ДатаВылетаЛокальная" id="50">
+					<DataPath>~Реквизит1.ДатаВылетаЛокальная</DataPath>
+					<ContextMenu name="Реквизит1ДатаВылетаЛокальнаяКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="Реквизит1ДатаВылетаЛокальнаяРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="Реквизит1ДатаПрилета" id="53">
+					<DataPath>~Реквизит1.ДатаПрилета</DataPath>
+					<ContextMenu name="Реквизит1ДатаПрилетаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="Реквизит1ДатаПрилетаРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<LabelField name="Реквизит1ДатаПрилетаЛокальная" id="56">
+					<DataPath>~Реквизит1.ДатаПрилетаЛокальная</DataPath>
+					<ContextMenu name="Реквизит1ДатаПрилетаЛокальнаяКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="Реквизит1ДатаПрилетаЛокальнаяРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+				<LabelField name="Реквизит1Маршрут" id="59">
+					<DataPath>~Реквизит1.Маршрут</DataPath>
+					<ContextMenu name="Реквизит1МаршрутКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="Реквизит1МаршрутРасширеннаяПодсказка" id="61"/>
+				</LabelField>
+				<LabelField name="Реквизит1Номер" id="62">
+					<DataPath>~Реквизит1.Номер</DataPath>
+					<ContextMenu name="Реквизит1НомерКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="Реквизит1НомерРасширеннаяПодсказка" id="64"/>
+				</LabelField>
+				<LabelField name="Реквизит1НомерРейса" id="65">
+					<DataPath>~Реквизит1.НомерРейса</DataPath>
+					<ContextMenu name="Реквизит1НомерРейсаКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="Реквизит1НомерРейсаРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<CheckBoxField name="Реквизит1Отменен" id="68">
+					<DataPath>~Реквизит1.Отменен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="Реквизит1ОтмененКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="Реквизит1ОтмененРасширеннаяПодсказка" id="70"/>
+				</CheckBoxField>
+				<LabelField name="Реквизит1ПапкаРейса" id="71">
+					<DataPath>~Реквизит1.ПапкаРейса</DataPath>
+					<ContextMenu name="Реквизит1ПапкаРейсаКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="Реквизит1ПапкаРейсаРасширеннаяПодсказка" id="73"/>
+				</LabelField>
+				<LabelField name="Реквизит1Пассажиры" id="74">
+					<DataPath>~Реквизит1.Пассажиры</DataPath>
+					<ContextMenu name="Реквизит1ПассажирыКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="Реквизит1ПассажирыРасширеннаяПодсказка" id="76"/>
+				</LabelField>
+				<CheckBoxField name="Реквизит1ПометкаУдаления" id="77">
+					<DataPath>~Реквизит1.ПометкаУдаления</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="Реквизит1ПометкаУдаленияКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="Реквизит1ПометкаУдаленияРасширеннаяПодсказка" id="79"/>
+				</CheckBoxField>
+				<CheckBoxField name="Реквизит1Проведен" id="80">
+					<DataPath>~Реквизит1.Проведен</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="Реквизит1ПроведенКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="Реквизит1ПроведенРасширеннаяПодсказка" id="82"/>
+				</CheckBoxField>
+				<LabelField name="Реквизит1Ссылка" id="83">
+					<DataPath>~Реквизит1.Ссылка</DataPath>
+					<ContextMenu name="Реквизит1СсылкаКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="Реквизит1СсылкаРасширеннаяПодсказка" id="85"/>
+				</LabelField>
+				<LabelField name="Реквизит1ЭкипажСтрока" id="86">
+					<DataPath>~Реквизит1.ЭкипажСтрока</DataPath>
+					<ContextMenu name="Реквизит1ЭкипажСтрокаКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="Реквизит1ЭкипажСтрокаРасширеннаяПодсказка" id="88"/>
+				</LabelField>
+				<LabelField name="Реквизит1СтандартнаяКартинка" id="89">
+					<DataPath>Реквизит1.DefaultPicture</DataPath>
+					<ContextMenu name="Реквизит1СтандартнаяКартинкаКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="Реквизит1СтандартнаяКартинкаРасширеннаяПодсказка" id="91"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ДинамическийСписокПример</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Реквизит1" id="2">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Рейс.Ссылка КАК Ссылка,
+	Рейс.ВерсияДанных КАК ВерсияДанных,
+	Рейс.ПометкаУдаления КАК ПометкаУдаления,
+	Рейс.Номер КАК Номер,
+	Рейс.Дата КАК Дата,
+	Рейс.Проведен КАК Проведен,
+	Рейс.ДатаВылета КАК ДатаВылета,
+	Рейс.ДатаПрилета КАК ДатаПрилета,
+	Рейс.АэропортВылета КАК АэропортВылета,
+	Рейс.АэропортПрилета КАК АэропортПрилета,
+	Рейс.ВремяВПолете КАК ВремяВПолете,
+	Рейс.Пассажиры КАК Пассажиры,
+	Рейс.ЭкипажСтрока КАК ЭкипажСтрока,
+	Рейс.АгентВылета КАК АгентВылета,
+	Рейс.АгентПрилета КАК АгентПрилета,
+	Рейс.ДатаВылетаЛокальная КАК ДатаВылетаЛокальная,
+	Рейс.ДатаПрилетаЛокальная КАК ДатаПрилетаЛокальная,
+	Рейс.Маршрут КАК Маршрут,
+	Рейс.ВС КАК ВС,
+	Рейс.ПапкаРейса КАК ПапкаРейса,
+	Рейс.ВремяВПолетеСтрока КАК ВремяВПолетеСтрока,
+	Рейс.АэропортВылетаСмещениеUTC КАК АэропортВылетаСмещениеUTC,
+	Рейс.АэропортПрилетаСмещениеUTC КАК АэропортПрилетаСмещениеUTC,
+	Рейс.НомерРейса КАК НомерРейса,
+	Рейс.Отменен КАК Отменен
+ИЗ
+	Документ.Рейс КАК Рейс</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter/>
+							<dcsset:appearance/>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Запррос на сайт</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа4" id="24">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<UsualGroup name="Группа5" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>GET Запрос</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<InputField name="СерверЗапроса" id="1">
+							<DataPath>Объект.СерверЗапроса</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СерверЗапросаКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="СерверЗапросаРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<TextDocumentField name="ТекстЗапроса" id="4">
+							<DataPath>Объект.ТекстЗапроса</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="6"/>
+						</TextDocumentField>
+						<UsualGroup name="Группа8" id="50">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<UsualGroup name="Группа6" id="31">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Методы</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="32"/>
+									<ChildItems>
+										<InputField name="Метод1" id="33">
+											<DataPath>Метод1</DataPath>
+											<ContextMenu name="Метод1КонтекстноеМеню" id="34"/>
+											<ExtendedTooltip name="Метод1РасширеннаяПодсказка" id="35"/>
+										</InputField>
+										<InputField name="Метод2" id="36">
+											<DataPath>Метод2</DataPath>
+											<ContextMenu name="Метод2КонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="Метод2РасширеннаяПодсказка" id="38"/>
+										</InputField>
+										<InputField name="Метод3" id="39">
+											<DataPath>Метод3</DataPath>
+											<ContextMenu name="Метод3КонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="Метод3РасширеннаяПодсказка" id="41"/>
+										</InputField>
+										<InputField name="Метод4" id="42">
+											<DataPath>Метод4</DataPath>
+											<ContextMenu name="Метод4КонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="Метод4РасширеннаяПодсказка" id="44"/>
+										</InputField>
+										<InputField name="Метод5" id="45">
+											<DataPath>Метод5</DataPath>
+											<ContextMenu name="Метод5КонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="Метод5РасширеннаяПодсказка" id="47"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа7" id="48">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Значения</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="49"/>
+									<ChildItems>
+										<InputField name="Значение1" id="52">
+											<DataPath>Значение1</DataPath>
+											<ContextMenu name="Значение1КонтекстноеМеню" id="53"/>
+											<ExtendedTooltip name="Значение1РасширеннаяПодсказка" id="54"/>
+										</InputField>
+										<InputField name="Значение2" id="55">
+											<DataPath>Значение2</DataPath>
+											<ContextMenu name="Значение2КонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="Значение2РасширеннаяПодсказка" id="57"/>
+										</InputField>
+										<InputField name="Значение3" id="58">
+											<DataPath>Значение3</DataPath>
+											<ContextMenu name="Значение3КонтекстноеМеню" id="59"/>
+											<ExtendedTooltip name="Значение3РасширеннаяПодсказка" id="60"/>
+										</InputField>
+										<InputField name="Значение4" id="61">
+											<DataPath>Значение4</DataPath>
+											<ContextMenu name="Значение4КонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="Значение4РасширеннаяПодсказка" id="63"/>
+										</InputField>
+										<InputField name="Значение5" id="64">
+											<DataPath>Значение5</DataPath>
+											<ContextMenu name="Значение5КонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="Значение5РасширеннаяПодсказка" id="66"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа2" id="14">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="15"/>
+							<ChildItems>
+								<UsualGroup name="Группа3" id="16">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="17"/>
+									<ChildItems>
+										<InputField name="РасширениеВыходногоФайла" id="7">
+											<DataPath>Объект.РасширениеВыходногоФайла</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<MaxWidth>9</MaxWidth>
+											<ContextMenu name="РасширениеВыходногоФайлаКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="РасширениеВыходногоФайлаРасширеннаяПодсказка" id="9"/>
+										</InputField>
+										<LabelDecoration name="Декорация1" id="18">
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="19"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="20"/>
+										</LabelDecoration>
+										<Button name="ВыполнитьЗапрос" id="10">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВыполнитьЗапрос</CommandName>
+											<ExtendedTooltip name="ВыполнитьЗапросРасширеннаяПодсказка" id="11"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="Декорация3" id="28">
+					<ContextMenu name="Декорация3КонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="30"/>
+				</LabelDecoration>
+				<UsualGroup name="Группа1" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация2" id="21">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>	1) По запросу от «клиента» из коммерческого модуля 1С передаются данные в «Ядро»
+
+1. АП вылета (departure_airport)
+2. АП назаначения (arrival_airport)
+3. ДатаВремя (datetime)
+4. Воздушное судно (aircraft)
+5. Тип ВС (aircraft_profile)
+6. Количество пассажиров «Туда» (pax_there)
+7. Количество пассажиров «Обратно» (pax_back)
+
+method — GET
+
+https://core.najet.ru/v1/get-price-flight?
+departure_airport=&lt;value&gt;
+&amp;arrival_airport=&lt;value&gt;
+&amp;datetime=&lt;value&gt;
+&amp;aircraft=&lt;value&gt;
+&amp;aircraft_profile=&lt;value&gt;
+&amp;pax_there=&lt;value&gt;
+&amp;pax_back=&lt;value&gt;
+
+Где:
+ &lt;value&gt; имеющиеся значения (надо согласовать, в каком виде они будут)
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="23"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.GETЗапросы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Метод1" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метод1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Метод2" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метод2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Значение2" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Метод3" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метод3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Значение3" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Метод4" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метод4</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Значение4" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение4</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Метод5" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метод5</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Значение5" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение5</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Значение1" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьЗапрос" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьЗапрос</Action>
+		</Command>
+	</Commands>
+</Form>

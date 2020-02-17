@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="ЗаписатьИзменения" id="13">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<DefaultItem>true</DefaultItem>
+			<CommandName>Form.Command.ЗаписатьИзменения</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и Закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ЗаписатьИзмененияРасширеннаяПодсказка" id="14"/>
+		</Button>
+		<InputField name="ГлавныйУзел" id="21">
+			<DataPath>ГлавныйУзел</DataPath>
+			<ContextMenu name="ГлавныйУзелКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ГлавныйУзелРасширеннаяПодсказка" id="23"/>
+			<Events>
+				<Event name="TextEditEnd">ГлавныйУзелОкончаниеВводаТекста</Event>
+			</Events>
+		</InputField>
+		<InputField name="АдресШлюзаMediaAPI" id="27">
+			<DataPath>АдресШлюзаMediaAPI</DataPath>
+			<ContextMenu name="АдресШлюзаMediaAPIКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="АдресШлюзаMediaAPIРасширеннаяПодсказка" id="29"/>
+			<Events>
+				<Event name="TextEditEnd">АдресШлюзаMediaAPIОкончаниеВводаТекста</Event>
+			</Events>
+		</InputField>
+		<InputField name="АдресШлюзаAPI" id="36">
+			<DataPath>АдресШлюзаAPI</DataPath>
+			<ContextMenu name="АдресШлюзаAPIКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="АдресШлюзаAPIРасширеннаяПодсказка" id="38"/>
+			<Events>
+				<Event name="TextEditEnd">АдресШлюзаAPIОкончаниеВводаТекста</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="ОтключитьВзаимодействиеСЯдром" id="24">
+			<DataPath>ОтключитьВзаимодействиеСЯдром</DataPath>
+			<CheckBoxType>CheckBox</CheckBoxType>
+			<ContextMenu name="ОтключитьВзаимодействиеСЯдромКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="ОтключитьВзаимодействиеСЯдромРасширеннаяПодсказка" id="26"/>
+			<Events>
+				<Event name="OnChange">ОтключитьВзаимодействиеСЯдромПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="Группа1" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тайм лайн</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<InputField name="АдресТаймлайна" id="18">
+					<DataPath>АдресТаймлайна</DataPath>
+					<ContextMenu name="АдресТаймлайнаКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="АдресТаймлайнаРасширеннаяПодсказка" id="20"/>
+					<Events>
+						<Event name="TextEditEnd">АдресТаймлайнаОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<InputField name="АдресAPIТаймлайна" id="10">
+					<DataPath>АдресAPIТаймлайна</DataPath>
+					<ContextMenu name="АдресAPIТаймлайнаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="АдресAPIТаймлайнаРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="TextEditEnd">АдресAPIТаймлайнаОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<InputField name="ИнтервалОбновленияТаймлайна" id="15">
+					<DataPath>ИнтервалОбновленияТаймлайна</DataPath>
+					<Width>2</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ИнтервалОбновленияТаймлайнаКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ИнтервалОбновленияТаймлайнаРасширеннаяПодсказка" id="17"/>
+					<Events>
+						<Event name="TextEditEnd">ИнтервалОбновленияТаймлайнаОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="Группа2" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<InputField name="ПарольAPIТаймлайна" id="30">
+							<DataPath>ПарольAPIТаймлайна</DataPath>
+							<ContextMenu name="ПарольAPIТаймлайнаКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ПарольAPIТаймлайнаРасширеннаяПодсказка" id="32"/>
+							<Events>
+								<Event name="TextEditEnd">ПарольAPIТаймлайнаОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПользовательAPIТаймлайна" id="33">
+							<DataPath>ПользовательAPIТаймлайна</DataPath>
+							<ContextMenu name="ПользовательAPIТаймлайнаКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ПользовательAPIТаймлайнаРасширеннаяПодсказка" id="35"/>
+							<Events>
+								<Event name="TextEditEnd">ПользовательAPIТаймлайнаОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.НастройкаAPI</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="АдресAPIТаймлайна" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес API таймлайна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнтервалОбновленияТаймлайна" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал обновления таймлайна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресТаймлайна" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес таймлайна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГлавныйУзел" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Главный узел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтключитьВзаимодействиеСЯдром" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить взаимодействие с ядром</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресШлюзаMediaAPI" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес шлюза media API</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольAPIТаймлайна" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль API таймлайна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательAPIТаймлайна" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь API таймлайна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресШлюзаAPI" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес шлюза API</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИзменения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИзменения</Action>
+		</Command>
+	</Commands>
+</Form>
