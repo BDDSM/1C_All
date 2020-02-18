@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДействиеБезЗанятости</dataPath>
+			<field>ДействиеБезЗанятости</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидОбъекта</dataPath>
+			<field>ВидОбъекта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектПланирования</dataPath>
+			<field>ОбъектПланирования</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяДействия</dataPath>
+			<field>ИмяДействия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РольОбъекта</dataPath>
+			<field>РольОбъекта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Источник</dataPath>
+			<field>Источник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Событие</dataPath>
+			<field>Событие</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОкончаниеДействия</dataPath>
+			<field>ОкончаниеДействия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Шаблон</dataPath>
+			<field>Шаблон</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоНачалоРабочегоЦикла</dataPath>
+			<field>ЭтоНачалоРабочегоЦикла</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсходноеМесто</dataPath>
+			<field>ИсходноеМесто</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусДействия</dataPath>
+			<field>СтатусДействия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонечноеМесто</dataPath>
+			<field>КонечноеМесто</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШаблонНеИспользуется</dataPath>
+			<field>ШаблонНеИспользуется</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	плн_Действия.Ссылка КАК Ссылка,
+	плн_Действия.Номер КАК Номер,
+	плн_Действия.Дата КАК Дата,
+	плн_Действия.ВидОбъекта КАК ВидОбъекта,
+	плн_Действия.Шаблон КАК Шаблон,
+	плн_Действия.ОбъектПланирования КАК ОбъектПланирования,
+	плн_Действия.РольОбъекта КАК РольОбъекта,
+	плн_Действия.ОкончаниеДействия КАК ОкончаниеДействия,
+	плн_Действия.ИмяДействия КАК ИмяДействия,
+	плн_Действия.Событие КАК Событие,
+	плн_Действия.ИсходноеМесто КАК ИсходноеМесто,
+	плн_Действия.КонечноеМесто КАК КонечноеМесто,
+	плн_Действия.Описание КАК Описание,
+	плн_Действия.СтатусДействия КАК СтатусДействия,
+	плн_Действия.ЭтоНачалоРабочегоЦикла КАК ЭтоНачалоРабочегоЦикла,
+	плн_Действия.ШаблонНеИспользуется КАК ШаблонНеИспользуется,
+	плн_Действия.Источник КАК Источник,
+	плн_Действия.ДействиеБезЗанятости КАК ДействиеБезЗанятости
+ИЗ
+	Документ.плн_Действия КАК плн_Действия
+ГДЕ
+	плн_Действия.Проведен
+	И плн_Действия.Дата &gt;= &amp;НачалоДействия
+	И плн_Действия.ОкончаниеДействия &lt;= &amp;ОкончаниеДействия</query>
+	</dataSet>
+	<parameter>
+		<name>НачалоДействия</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало действия</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ОкончаниеДействия</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Окончание действия</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Действия по объекту планирования</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Действия по объекту планирования</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:userFields>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПолеСтрока</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>""</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>""</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression/>
+					<dcsset:totalExpressionPresentation/>
+				</dcsset:item>
+			</dcsset:userFields>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ОбъектПланирования</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>361e2466-d3d0-11e9-ac8e-b42e9905bfa2</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>417159cc-d3d1-11e9-ac8e-b42e9905bfa2</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Ссылка</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Дата</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ОкончаниеДействия</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ИсходноеМесто</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ИсходноеМесто.ИсточникОбъекта.Код</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КонечноеМесто</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КонечноеМесто.ИсточникОбъекта.Код</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Событие</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Событие.ИсходноеМесто.ИсточникОбъекта</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Событие.Источник</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Событие.Источник.Борт</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Событие.Источник.ВоздушноеСудно</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

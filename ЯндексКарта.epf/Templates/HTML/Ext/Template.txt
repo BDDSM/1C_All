@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, max-age=0, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="Fri, 01 Jan 1990 00:00:00 GMT"/>
+
+<script src="http://yandex.st/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+if(!document.getElementById)document.getElementById=function(elemID){return eval("document.all['"+elemID+"']");}
+
+function cancelEvent(e){
+	e=e?e:window.event;
+	if(e.stopPropagation)e.stopPropagation();
+	if(e.preventDefault)e.preventDefault();
+	e.cancelBubble=true;
+	e.cancel=true;
+	e.returnValue=false;
+	return false;
+}
+
+// искусственный вызов клика; нужен для передачи в событие 1С "ПриНажатии"
+function _doClick(){
+	if(document.body.dispatchEvent){
+		var evt = document.body.createEvent('MouseEvents');
+		evt.initEvent("click", true, true);
+		document.body.dispatchEvent(evt);
+	}else{
+		var evt = document.createEventObject();
+		document.fireEvent('onclick', evt);
+	}
+}
+
+// остановить обработку ошибок
+function errorHandler(msg){return true;}
+window.onerror = errorHandler;
+
+// объект, хранящий информацию о последнем событии на карте для передачи ее в 1С
+function lastEvent(event, lon, lat, placemarkID){
+	this.event=event?event:'';
+	this.lon=lon?lon:-1;
+	this.lat=lat?lat:-1;
+	this.placemarkID=placemarkID?placemarkID:'';
+}
+
+// новый класс карты, наследумый от ymaps.Map
+function Map1C(element,state,options){
+	Map1C.superclass.constructor.call(this,element,state,options);
+	this.lastevent=new lastEvent();
+}
+
+// новый класс infoButton - кнопка режима отображения координат на карте
+function infoButton(params,options){
+	infoButton.superclass.constructor.call(this,params,options);
+}
+
+var theMap; // экземпляр класса Map1C
+
+ymaps.ready(function(){
+
+	// инициализация класса Map1C
+	ymaps.util.augment(Map1C,ymaps.Map,{
+		showControl:function(control){
+			if(control=='trafficControl'){
+				c=this.trafficControl;
+			}
+			else if(control=='mapTools'){
+				c=this.mapTools;
+			}
+			else{
+				c=control;
+			}
+            return this.controls.add(c);
+		},
+		hideControl:function(control){
+			if(control=='trafficControl'){
+				c=this.trafficControl;
+			}
+			else if(control=='mapTools'){
+				c=this.mapTools;
+			}
+			else{
+				c=control;
+			}	
+            this.controls.remove(c);
+		},
+		closeBalloon:function(e){
+			this.doClick('closeBalloon');
+		},
+		getPlacemarkById:function(id){
+			var p;
+			this.geoObjects.each(function(geoObject){if(geoObject.properties.get('id')==id){p=geoObject;return false;}});
+			return p;
+		},
+		selectPlacemark:function(placemark){
+			this.geoObjects.each(function(geoObject){
+				if(geoObject==placemark){
+					if(!geoObject.properties.get('selected')){
+						geoObject.properties.set('original',geoObject.options.get('preset'));
+						geoObject.options.set('preset','twirl#redStretchyIcon');
+						geoObject.properties.set('selected',true);
+					}
+				}else{
+					if(geoObject.properties.get('selected')){
+						var orig=geoObject.properties.get('original');
+						if(orig){geoObject.options.set('preset',orig);};
+						geoObject.properties.set('selected',false);
+					}
+				}
+			});
+		},
+		selectPlacemarks:function(placemarks){
+			var arr=[];
+		    for(var i=0;i<placemarks.length;i++){
+		    	p=this.getPlacemarkById(placemarks[i]);
+		        if(p){arr.push(p);}
+		    };
+		},
+		doClick:function(e,lon,lat,placemarkid){
+			// А вут начинаются танцы с бубнами. Свойства объекта, передаваемого в 1С
+			// должны быть обязательно заполнены каким-нибудь значением "простого" типа (строка, число).
+			// Количество свойств, передаваемого в 1С не может меняться, даже если использовать конструкцию вида evt=new Object().
+			// Если вышеуказанное не соблюдать, 1С получит непонятный com-объект (причем, не null) или com-объект с ошибочными свойствами.
+			// Кому интересно узнать подробности - пишите на otsygankov@mail.ru
+			this.lastevent.event=(e)?e:'';
+			this.lastevent.lon=(lon)?lon:-1;
+			this.lastevent.lat=(lat)?lat:-1;
+			this.lastevent.placemarkID=(placemarkid)?placemarkid:'';
+			_doClick();
+		},
+		getLastEvent:function(){
+			return this.lastevent;
+		}
+	});
+
+	// инициализация класса infoButton
+	ymaps.util.augment(infoButton,ymaps.control.Button,{
+        onAddToMap:function(){
+            infoButton.superclass.onAddToMap.apply(this,arguments);
+		    this.events.add('select',this._onSelect,this);
+		    this.events.add('deselect',this._onDeselect,this);
+        },
+        onRemoveFromMap:function(){
+        	var m=this.getMap();
+        	if(this.cursor){this.cursor.remove();}
+            if(m.balloon.isOpen()){m.balloon.close();};
+		    m.events.remove('click',this._onMapClick,this);
+		    this.events.remove('select',this._onSelect,this);
+		    this.events.remove('deselect',this._onDeselect,this);
+            infoButton.superclass.onRemoveFromMap.apply(this,arguments);
+        },
+        _onSelect:function(e){
+        	var m=e.get('target').getMap();
+        	this.cursor=m.cursors.push('help');
+		    m.events.add('click',this._onMapClick,this);
+        },
+        _onDeselect:function(e){
+        	var m=e.get('target').getMap();
+        	if(this.cursor){this.cursor.remove();}
+            if(m.balloon.isOpen()){m.balloon.close();};
+		    m.events.remove('click',this._onMapClick,this);
+        },
+        _onMapClick:function(e){
+			if(!this.stopEvents){ // не будут обрабатываться все последующте запросы на геокодирование, пока не отрабатается текущий
+				this.stopEvents=true;
+				var coords=e.get('coords');
+				var m=this.getMap(); 
+	        	e.stopPropagation(); // останов распространения события
+        		var b=m.balloon.open(coords,{content:'поиск...'},{closeButton:true});
+				ymaps.geocode(coords,{
+	                results: 1
+	            }).then(function(res){
+					var geoResult=res.geoObjects.get(0);
+					if(geoResult){
+				    	b.setData({content:"<b>"+geoResult.properties.get('name')+"</b><div>"+geoResult.properties.get('description')+"</div>"});
+						m.doClick('openBalloon',coords[0],coords[1]);
+		            }
+	            },function(err){b.setData({content:"<b>Нет данных по объекту</div>"})});
+				this.stopEvents=false;
+	        }
+        }
+	});
+
+    // останов всех кликов, передаваемых в 1С; все что нужно, вызовем искуссвенно
+	document.body.onclick=function(e){cancelEvent(e);};
+
+    theMap=new Map1C("map",{
+		center:[ymaps.geolocation.latitude,ymaps.geolocation.longitude], // Определение координат по ip
+        zoom:10,
+		behaviors:['default','scrollZoom']
+    });
+
+	// при закрытии балуна в 1С передается информация
+	theMap.balloon.events.add('close',theMap.closeBalloon,theMap);
+
+	theMap.mapTools=new ymaps.control.MapTools({items:["default",new infoButton({
+        data:{
+            image:'%КартинкаИнформация%',
+            title:'Информация об объекте'
+        }
+    },{
+        selectOnClick:true,
+        parent:this
+    })]});
+	
+	theMap.trafficControl=new ymaps.control.TrafficControl();
+	
+});
+
+</script>
+
+<style type="text/css">
+    html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+	body{-moz-user-select:none;}
+</style>
+	
+</head>
+	
+<body scroll="no">
+	<div id="map" style="width:100%;height:100%;"></div>
+</body>
+</html>

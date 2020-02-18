@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Рейс</dataPath>
+			<field>Рейс</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рейс</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Действия</dataPath>
+			<field>Действия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>События</dataPath>
+			<field>События</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>События</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Рейс.Ссылка КАК Рейс,
+	плн_События.Ссылка КАК События,
+	плн_Действия.Ссылка КАК Действия
+ПОМЕСТИТЬ ВТ_Рейс
+{ВЫБРАТЬ
+	Рейс.*,
+	События.*,
+	Действия.*}
+ИЗ
+	Документ.Рейс КАК Рейс
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.плн_События КАК плн_События
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.плн_Действия КАК плн_Действия
+			ПО плн_События.Ссылка = плн_Действия.Событие
+		ПО Рейс.Ссылка = плн_События.Источник
+ГДЕ
+	НЕ Рейс.ПометкаУдаления
+	И Рейс.ДатаВылета &gt;= &amp;ДатаВылета
+	И Рейс.ДатаПрилета &lt;= &amp;ДатаПрилета</query>
+		<autoFillFields>false</autoFillFields>
+		<useQueryGroupIfPossible>false</useQueryGroupIfPossible>
+	</dataSet>
+	<parameter>
+		<name>ДатаВылета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата вылета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаПрилета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата прилета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отображение даных по всем действиям</v8:content>
+			</v8:item>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>154d5a08-c8e1-11e9-dd96-b42e9905bfa2</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Рейс</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>События</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Действия</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

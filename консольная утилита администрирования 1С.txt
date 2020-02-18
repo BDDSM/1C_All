@@ -1,0 +1,10 @@
+
+Утилита для администрирования сессий 1С 
+запуск скрипта тольк из самой папки ones-cli
+ 
+ones_cli sessions list - отображает список открытых сессий по всем базам
+ones_cli sessions list -i develop - отображает список открытых сессий для базы develop
+ones_cli sessions terminate - завершает все сессии всех баз (кроме сессий конфигуратора)
+ones_cli sessions terminate -i develop - завершает все сессии базы develop (кроме конфигуратора)
+ones_cli sessions terminate -i develop --designer - завершает все сессии базы develop (и конфигуратора тоже)
+

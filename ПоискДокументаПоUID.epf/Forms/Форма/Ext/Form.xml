@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="Группа6" id="27">
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поиск по UID</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="13">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="14"/>
+							<ChildItems>
+								<InputField name="ДокументРейсЗаказ" id="1">
+									<DataPath>ДокументРейсЗаказ</DataPath>
+									<ContextMenu name="ДокументРейсЗаказКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ДокументРейсЗаказРасширеннаяПодсказка" id="3"/>
+								</InputField>
+								<UsualGroup name="Группа4" id="17">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="18"/>
+									<ChildItems>
+										<Button name="ПолучитьUIDДокумента" id="6">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПолучитьUIDДокумента</CommandName>
+											<ExtendedTooltip name="ПолучитьUIDДокументаРасширеннаяПодсказка" id="7"/>
+										</Button>
+										<InputField name="НайденнаяСтрокаUID" id="19">
+											<DataPath>НайденнаяСтрокаUID</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Font ref="style:NormalTextFont" height="8" kind="StyleItem"/>
+											<ContextMenu name="НайденнаяСтрокаUIDКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="НайденнаяСтрокаUIDРасширеннаяПодсказка" id="21"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа3" id="15">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="16"/>
+							<ChildItems>
+								<Button name="ДокументПоUID" id="4">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ДокументПоUID</CommandName>
+									<ExtendedTooltip name="ДокументПоUIDРасширеннаяПодсказка" id="5"/>
+								</Button>
+								<InputField name="НайденныйДокументПоUID" id="8">
+									<DataPath>НайденныйДокументПоUID</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="НайденныйДокументПоUIDКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="НайденныйДокументПоUIDРасширеннаяПодсказка" id="10"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа5" id="22">
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<InputField name="ИсходнаяСтрокаСотрудникаУИД" id="29">
+							<DataPath>ИсходнаяСтрокаСотрудникаУИД</DataPath>
+							<ContextMenu name="ИсходнаяСтрокаСотрудникаУИДКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ИсходнаяСтрокаСотрудникаУИДРасширеннаяПодсказка" id="31"/>
+						</InputField>
+						<InputField name="СправочникСотрудники" id="24">
+							<DataPath>СправочникСотрудники</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сотрудник</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СправочникСотрудникиКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="СправочникСотрудникиРасширеннаяПодсказка" id="26"/>
+						</InputField>
+						<Button name="ПолучитьКарточкуСотрудникаПОУИД" id="32">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПолучитьКарточкуСотрудникаПОУИД</CommandName>
+							<ExtendedTooltip name="ПолучитьКарточкуСотрудникаПОУИДРасширеннаяПодсказка" id="33"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ПолучитьUIDДокумента</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДокументРейсЗаказ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ рейса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НайденныйДокументПоUID" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найденный документ по UID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НайденнаяСтрокаUID" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найденная строка UID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>200</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СправочникСотрудники" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник сотрудники</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсходнаяСтрокаСотрудникаУИД" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходная строка сотрудника УИД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДокументПоUID" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ по UID</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ по UID</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДокументПоUID</Action>
+		</Command>
+		<Command name="ПолучитьUIDДокумента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить UID документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить UIDДокумента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьUIDДокумента</Action>
+		</Command>
+		<Command name="ПолучитьКарточкуСотрудникаПОУИД" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить карточку сотрудника ПОУИД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить карточку сотрудника ПОУИД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьКарточкуСотрудникаПОУИД</Action>
+		</Command>
+	</Commands>
+</Form>
